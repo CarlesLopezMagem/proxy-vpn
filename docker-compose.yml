@@ -4,9 +4,12 @@ services:
     build: ./nginx
     ports:
       - 80:80
-  openvpn-as:
+      - 443:443
+    depends_on:
+      - openvpn
+  openvpn:
     image: linuxserver/openvpn-as
-    container_name: openvpn-as
+    container_name: openvpn
     cap_add:
       - NET_ADMIN
     environment:
@@ -20,5 +23,11 @@ services:
       - 9443:9443
       - 1194:1194/udp
     restart: unless-stopped
+  # hello:
+  #   image: nginx
+  #   ports:
+  #     - 8080:80
+  #   environment:
+  #     - NGINX_PORT=80
 volumes:
   openvpn:
