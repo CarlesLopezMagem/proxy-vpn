@@ -25,6 +25,6 @@ docker-compose up -d --build
 
 ## Links
 
-- Tutorial (https://www.youtube.com/watch?v=OXjrBvSYB9o)
+- Tutorial (<https://www.youtube.com/watch?v=OXjrBvSYB9o/>)
 
-- Instal·lador OpneVPN (https://github.com/Angristan/OpenVPN-install)
+- Instal·lador OpneVPN (<https://github.com/Angristan/OpenVPN-install/>)
