@@ -20,6 +20,7 @@ L'instal·Lador també et crearà un fitxer `.ovpn` per configurar el client. Af
 Finalment crees el reverse proxy amb el docker-compose:
 
 ```bash
+echo "HOSTREDIRECT={IP_OR_DOMAIN}" > nginx.conf
 docker-compose up -d --build
 ```
 
