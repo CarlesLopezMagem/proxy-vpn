@@ -1,7 +1,4 @@
 stream {
-    upstream smtpd {
-	server host_redirect:587;
-    }
     upstream imap {
 	server host_redirect:143;
     }
@@ -13,9 +10,6 @@ stream {
     }
     upstream https {
         server host_redirect:443;
-    }
-    upstream pop3 {
-	server host_redirect:110;
     }
 
     server {
@@ -33,14 +27,6 @@ stream {
     server {
 	listen 143;
 	proxy_pass imap;
-    }
-    server {
-	listen 587;
-	proxy_pass smtpd;
-    }
-    server {
-	listen 110;
-	proxy_pass pop3;
     }
 }
  events {}
