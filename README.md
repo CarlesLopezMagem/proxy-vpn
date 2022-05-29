@@ -20,7 +20,7 @@ L'instal·Lador també et crearà un fitxer `.ovpn` per configurar el client. Af
 Finalment crees el reverse proxy amb el docker-compose:
 
 ```bash
-echo "HOSTREDIRECT={IP_OR_DOMAIN}" > nginx.conf
+echo "HOSTREDIRECT={IP_OR_DOMAIN}" > nginx.env
 docker-compose up -d --build
 ```
 
@@ -29,3 +29,6 @@ docker-compose up -d --build
 - Tutorial (<https://www.youtube.com/watch?v=OXjrBvSYB9o/>)
 
 - Instal·lador OpneVPN (<https://github.com/Angristan/OpenVPN-install/>)
+
+- Connecting to Access Server with Linux (<https://openvpn.net/vpn-server-resources/connecting-to-access-server-with-linux/>)
+
